@@ -1,0 +1,28 @@
+# №1
+n = int(input("Введите количество человек: "))
+total = 0
+for i in range(n):
+    age = int(input(f"Возраст человека №{i + 1}: "))
+    total += age
+average = total / n
+print(f"Средний возраст: {average}")
+
+
+# №2
+code = input("Введите цветовой код: ").strip().lower()
+r = int(code[0:2], 16)
+g = int(code[2:4], 16)
+b = int(code[4:6], 16)
+if r == g == b:
+    if r == 0:
+        print("черный")
+    elif r == 255:
+        print("белый")
+    else:
+        print("серый")
+elif r > g and r > b:
+    print("красный")
+elif g > r and g > b:
+    print("зеленый")
+else:
+    print("синий")
